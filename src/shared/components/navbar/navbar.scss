@@ -1,0 +1,17 @@
+.navbar{
+    background-color: #000000;
+    margin: 0 379px;
+    width: calc(100% - 379px * 2);
+    height: 191px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        width: 165px;
+        height: 165px;
+    }
+    .menu-container{
+        display: flex;
+        
+    }
+}

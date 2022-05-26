@@ -1,0 +1,14 @@
+.button{
+    color: #ED1E79;
+    display: flex;
+    border: 1px #ED1E79 solid;
+    border-radius: 12px;
+}
+.outlined{
+    height: 47px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .material-symbols-outlined{font-size: 33px;}
+}
