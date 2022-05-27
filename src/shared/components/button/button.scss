@@ -1,8 +1,9 @@
 .button{
-    color: #ED1E79;
+    color: $pink;
     display: flex;
-    border: 1px #ED1E79 solid;
+    border: 1px $pink solid;
     border-radius: 12px;
+    cursor: pointer;
 }
 .outlined{
     height: 47px;

@@ -1,3 +1,5 @@
+@import './global';
+@import './vars';
 @import './screens/screens.styles.scss';
 @import './shared/components/components.styles.scss';
 
@@ -7,10 +9,8 @@ html,
 #root {
   margin: 0;
   color: white;
-  background-color: #000000;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: $black;
+  font-family: $text-medium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 100vw; 

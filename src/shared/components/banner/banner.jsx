@@ -1,5 +1,5 @@
 import React from "react";
-import Stray from "../../../assets/Stray.jpg"
+import Stray from "../../../assets/imgs/Stray.jpg"
 
 export const Banner = () =>{
     return(

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/imgs/logo.png";
 import { Button } from "../button/button";
 
 export const NavBar = () => {
@@ -7,8 +7,8 @@ export const NavBar = () => {
         <div className="navbar">
             <img src={logo} alt="" className="logo"/>
             <div className="menu-container">
-                <div>Home</div>
-                <div>Browse</div>
+                <a href="/#">Home</a>
+                <a href="/#">Browse</a>
                 <Button text='Cart' outlined={true}/>
             </div>
         </div>

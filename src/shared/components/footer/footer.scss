@@ -1,0 +1,31 @@
+.footer{
+    width: 100vw;
+    height: 223px;
+    background-color: $darkGrey;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 138px;
+    box-sizing: border-box;
+    img{
+        width: 169px;
+        height: 169px;
+        margin-right: 170px;
+    }
+    .links-container{
+        display: flex;
+        align-items: center;
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: $text-bold;
+            padding: 0 14px;
+        }
+        .divider{
+            background-color: white;
+            width: 2px;
+            height: 17px;
+        }
+    }
+}
