@@ -1,16 +1,17 @@
 .navbar{
     background-color: $black;
-    margin: 0 379px;
-    width: calc(100% - 379px * 2);
-    height: 191px;
+    padding: 0 clamp(204px, 20vw, 379px);
+    width: 100%;
+    height: clamp(125px, 12vw, 191px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 25px;
+    font-size: clamp(18px, 1.4vw, 25px);
     font-family: $text-bold;
+    box-sizing: border-box;
     .logo{
-        width: 165px;
-        height: 165px;
+        width: clamp(125px, 9vw, 165px);
+        height: clamp(125px, 9vw, 165px);
     }
     .menu-container{
         display: flex;
@@ -19,8 +20,34 @@
             text-decoration: none;
             color: white;
             padding: 0 15px;
-            margin: 0 80px;
+            margin: 0 clamp(4px, 4.2vw, 80px);
             &:hover{text-decoration: underline;}
         }
+    }
+    .material-symbols-outlined{display: none;}
+}
+@media screen and (max-width: 1024px) {
+    .navbar{
+        padding: 0 clamp(80px, 10.5vw, 122px);
+        height: clamp(100px, 13vw, 125px);
+        font-size: clamp(16px, 2vw, 18px);
+        .logo{
+            width: clamp(100px, 13vw, 125px);
+            height: clamp(100px, 13vw, 125px);
+        }
+        .material-symbols-outlined{display: none;}
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar{
+        padding: 0 clamp(38px, 10.5vw, 80px);
+        height: clamp(70px, 13.2vw, 100px);
+        font-size: clamp(18px, 1.4vw, 25px);
+        .logo{
+            width: clamp(70px, 13.2vw, 100px);
+            height: clamp(70px, 13.2vw, 100px);
+        }
+        .material-symbols-outlined{display: flex;}
+        .menu-container{display: none;}
     }
 }

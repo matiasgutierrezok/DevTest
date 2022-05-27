@@ -11,6 +11,7 @@ export const NavBar = () => {
                 <a href="/#">Browse</a>
                 <Button text='Cart' outlined={true}/>
             </div>
+            <span class="material-symbols-outlined">menu</span>
         </div>
     )
 }
