@@ -11,7 +11,7 @@
     .game-savings{
         width: 83px;
         height: 83px;
-        background-color: #ED1C24;
+        background-color: $red;
         border-radius: 50%;
         position: absolute;
         top: 24px;
@@ -60,7 +60,7 @@
             justify-content: space-between;
             span{
                 font-size: 40px;
-                color: #F7931E;
+                color: $yellow;
             }
         }
     }
