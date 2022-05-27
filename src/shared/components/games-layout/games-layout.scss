@@ -1,8 +1,9 @@
 .games-layout{
-    margin: 0 379px;
+    padding: 0 379px;
     width: calc(100vw - 379px * 2);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 27px;
     margin-bottom: 80px;
+    position: relative;
 }

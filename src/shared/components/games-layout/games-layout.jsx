@@ -2,7 +2,7 @@ import React from "react";
 import { GameCard } from "../game-card/game-card";
 
 
-export const GamesLayout = ({gamesArray}) =>{
+export const GamesLayout = ({gamesArray, counter}) =>{
     return(
         <div className="games-layout">
             {gamesArray?.map(obj=>{
@@ -15,6 +15,7 @@ export const GamesLayout = ({gamesArray}) =>{
                       normalPrice={obj.normalPrice}
                       salePrice={obj.salePrice}
                       key={obj.dealID}
+                      counter={counter}
                     />
                 )
             })}

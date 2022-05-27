@@ -7,12 +7,15 @@
     .search-bar{
         width: 660px;
         height: 70px;
+        border: double 3px transparent;
         border-radius: 12px;
-        border: 3px $pink solid;
+        background-image: linear-gradient($black, $black), 
+                            linear-gradient(135deg, $brandYellow, $brandPink, $brandPurple);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
         color: $pink;
         display: flex;
         align-items: center;
-        padding: 0 16px;
         input{
             all: unset;
             height: 100%;
@@ -20,8 +23,12 @@
             font-size: 35px;
             border-radius: 12px;
             background-color: transparent;
+            padding-left: 16px;
             &::placeholder{color: $pink}
         }
-        .material-symbols-outlined{font-size: 62px;}
+        .material-symbols-outlined{
+            font-size: 62px;
+            padding-right: 16px;
+        }
     }
 }

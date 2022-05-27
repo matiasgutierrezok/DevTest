@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-export const GameCard = ({savings, thumb, title, rating, normalPrice, salePrice}) =>{
+export const GameCard = ({savings, thumb, title, rating, normalPrice, salePrice, counter}) =>{
+    const [isSelected, setIsSelected] = useState(false)
 
     const savingsPercentage = () =>{
         return savings?.slice(0,2) + "%off"
     }
 
+    const handleCount = () =>{
+        let num = parseFloat(salePrice)
+        if(!isSelected === true) counter(num)
+        else if(!isSelected === false) counter(-num)
+        setIsSelected(!isSelected)
+    }
+
     return(
-        <div className="game-card">
+        <div className="game-card" onClick={()=>handleCount()}>
+            <div className={`${isSelected ? 'game-selected flex' : 'game-selected'}`}>
+                <span class="material-symbols-outlined">check</span>
+            </div>
             <div className="game-savings">{savingsPercentage()}</div>
             <img src={thumb} alt="" className="game-img"/>
             <div className="game-title">{title}</div>

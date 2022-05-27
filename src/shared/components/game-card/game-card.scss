@@ -7,7 +7,23 @@
     flex-direction: column;
     padding: 43px 49px 28px;
     box-sizing: border-box;
+    cursor: pointer;
     &:hover{border: 1px $pink solid;}
+    .game-selected{
+        position: absolute;
+        background-color: $lightBlue;
+        width: 31px;
+        height: 31px;
+        border-radius: 12px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        left: 5px;
+        top: 5px;
+        color: $black;
+        .material-symbols-outlined{font-size: 30px;}
+    }
+    .flex{display: flex;}
     .game-savings{
         width: 83px;
         height: 83px;
@@ -67,7 +83,7 @@
     .game-price-container{
         width: 100%;
         height: 66px;
-        background-color: $pink;
+        background-image: linear-gradient(135deg, $brandYellow, $brandPink, $brandPurple);
         border-radius: 12px;
         display: flex;
         align-items: center;
