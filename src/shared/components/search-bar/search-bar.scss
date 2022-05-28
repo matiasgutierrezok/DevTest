@@ -1,11 +1,10 @@
 .search-bar-container{
     width: 100vw;
-    height: 70px;
     margin-bottom: 95px;
     display: flex;
     justify-content: center;
     .search-bar{
-        width: 660px;
+        width: clamp(500px, 35vw, 660px);
         height: 70px;
         border: double 3px transparent;
         border-radius: 12px;
@@ -20,15 +19,37 @@
             all: unset;
             height: 100%;
             width: 100%;
-            font-size: 35px;
+            font-size: clamp(30px, 2vw, 35px);
             border-radius: 12px;
             background-color: transparent;
             padding-left: 16px;
             &::placeholder{color: $pink}
         }
         .material-symbols-outlined{
-            font-size: 62px;
+            font-size: clamp(50px, 4vw, 62px);
             padding-right: 16px;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .search-bar-container{
+        margin-bottom: 60px;
+        .search-bar{
+            width: clamp(400px, 49vw, 500px);
+            height: clamp(50px, 6.9vw, 70px);
+            input{font-size: clamp(24px, 3vw, 30px);}
+            .material-symbols-outlined{font-size: clamp(40px, 5vw, 50px);}
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .search-bar-container{
+        margin-bottom: 30px;
+        .search-bar{
+            width: clamp(278px, 53vw, 400px);
+            height: clamp(40px, 6.9vw, 50px);
+            input{font-size: clamp(16px, 4vw, 24px);}
+            .material-symbols-outlined{font-size: clamp(24px, 6vw, 40px);}
         }
     }
 }

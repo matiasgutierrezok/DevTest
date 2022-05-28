@@ -1,9 +1,22 @@
 .games-layout{
-    padding: 0 379px;
-    width: calc(100vw - 379px * 2);
+    padding: 0 clamp(204px, 20vw, 379px);
+    width: 100%;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(387px, 1fr));
+    justify-items: center;
     row-gap: 27px;
     margin-bottom: 80px;
     position: relative;
+}
+@media screen and (max-width: 1024px) {
+    .games-layout{
+        padding: 0 clamp(80px, 10.5vw, 122px);
+    }
+}
+@media screen and (max-width: 768px) {
+    .games-layout{
+        padding: 0 clamp(38px, 10.5vw, 80px);
+        grid-template-columns: repeat(auto-fill, minmax(284px, 1fr));
+    }
 }

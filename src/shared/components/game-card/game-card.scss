@@ -1,12 +1,12 @@
 .game-card{
-    width: 389px;
-    height: 488px;
+    width: 100%;
+    max-width: 291px;
+    height: clamp(379px, 22vw, 389px);
     border-radius: 12px;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 43px 49px 28px;
-    box-sizing: border-box;
+    padding: 43px clamp(25px, 2.6vw, 49px) 28px;
     cursor: pointer;
     &:hover{border: 1px $pink solid;}
     .game-selected{
@@ -39,14 +39,15 @@
         font-size: 16px;
     }
     .game-img{
-        width: 289px;
+        width: 100%;
+        max-width: 289px;
         height: 135px;
         margin-bottom: 18px;
     }
     .game-title{
-        font-size: 27px;
+        font-size: clamp(20px, 1.5vw, 27px);
         font-family: $text-bold;
-        height: 74px;
+        height: clamp(49px, 4vw, 74px);
         max-height: 74px;
         margin-bottom: 3px;
         white-space: nowrap;
@@ -64,18 +65,18 @@
         flex-direction: column;
         align-items: center;
         height: 88px;
-        margin-bottom: 31px;
+        margin-bottom: clamp(8px, 2vw, 31px);
         .game-review-text{
-            font-size: 25px;
+            font-size: clamp(20px, 1.9vw, 25px);
             font-family: $text-light;
             margin-bottom: 15px;
         }
         .game-rating{
-            width: 100%;
+            width: clamp(218px, 16vw, 291px);
             display: flex;
             justify-content: space-between;
             span{
-                font-size: 40px;
+                font-size: clamp(30px, 3vw, 40px);
                 color: $yellow;
             }
         }
@@ -96,4 +97,7 @@
         }
         .game-price{font-size: 30px;}
     }
+}
+@media screen and (max-width: 768px) {
+    .game-card{max-width: 234px;}
 }

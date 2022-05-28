@@ -26,6 +26,18 @@
         font-family: $text-bold;
     }
 }
-.flex{
-    display: flex;
+.flex{display: flex;}
+@media screen and (max-width: 1024px) {
+    .counter-container{
+        height: 110px;
+        flex-direction: column;
+        .text{
+            margin-bottom: 8px;
+            margin-right: 0;
+        }
+        .counter{
+            height: 46px;
+            width: 205px;
+        }
+    }
 }

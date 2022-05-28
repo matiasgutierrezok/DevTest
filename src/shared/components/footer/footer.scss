@@ -5,27 +5,58 @@
     display: flex;
     align-items: center;
     padding-top: 20px;
-    padding-left: 138px;
+    padding-left: clamp(81px, 8vw, 138px);
     box-sizing: border-box;
     img{
-        width: 169px;
-        height: 169px;
-        margin-right: 170px;
+        width: clamp(125px, 8.9vw, 169px);
+        height: clamp(125px, 8.9vw, 169px);
+        margin-right: clamp(30px, 9vw, 170px);
     }
     .links-container{
         display: flex;
         align-items: center;
-        a{
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-family: $text-bold;
-            padding: 0 14px;
+        .links{
+            display: flex;
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: clamp(14px, 3vw, 18px);
+                font-family: $text-bold;
+                padding: 0 14px;
+            }
+            .divider{
+                background-color: white;
+                width: 2px;
+                height: 17px;
+            }
         }
-        .divider{
-            background-color: white;
-            width: 2px;
-            height: 17px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .footer{
+        img{
+            width: clamp(100px, 13vw, 125px);
+            height: clamp(100px, 13vw, 125px);
+            margin-right: clamp(30px, 3vw, 170px);
+        }
+        .links-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 5px;
+            a{font-size: 14px;}
+            .divider{display: none;}
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer{
+        padding-left: clamp(16px, 3vw, 50px);
+        img{margin-right: clamp(1px, 3vw, 30px);}
+        .links-container{
+            display: grid;
+            grid-template-columns: repeat(2, clamp(100px, 29vw, 220px));
+            a{font-size: 14px;}
+            .divider{display: none;}
         }
     }
 }
